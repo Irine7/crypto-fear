@@ -1,0 +1,32 @@
+{
+	"name": "crypto-fear",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Irine7",
+	"license": "ISC",
+	"packageManager": "pnpm@10.30.0",
+	"dependencies": {
+		"axios": "^1.13.6",
+		"dotenv": "^17.3.1",
+		"express": "^5.2.1",
+		"node-cron": "^4.2.1",
+		"nodemon": "^3.1.14"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.6",
+		"@types/node": "^25.3.2",
+		"@types/node-cron": "^3.0.11",
+		"ts-node-dev": "^2.0.0",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	}
+}
