@@ -6,4 +6,4 @@ const nextConfig = {
   serverExternalPackages: ['node-cron'], 
 }
 
-module.exports = nextConfig
+export default nextConfig;
