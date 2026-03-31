@@ -1,12 +1,12 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import path from 'path';
+import { promises as fs } from 'fs';
 
-const DB_PATH = path.resolve('data.json');
+const dbPath = path.join(process.cwd(), 'data.json');
 
 // Читаем ДБ:
 export const readDb = async () => {
 	try {
-		const rawData = await fs.readFile(DB_PATH, 'utf-8');
+		const rawData = await fs.readFile(dbPath, 'utf-8');
 		return JSON.parse(rawData); // Парсим JSON
 	} catch (error) {
 		// Если файл пустой или его нет, возвращаем пустой массив:
@@ -16,5 +16,5 @@ export const readDb = async () => {
 
 export const writeDb = async (data: any[]) => {
 	const jsonString = JSON.stringify(data, null, 2);
-	await fs.writeFile(DB_PATH, jsonString, 'utf-8');
+	await fs.writeFile(dbPath, jsonString, 'utf-8');
 };
