@@ -1,13 +1,11 @@
 import express from 'express';
 import 'dotenv/config';
 import { getSentimentSummary } from './services/sentimentService';
-// import { db } from './db';
 import { readDb } from './db';
 import { initCron } from './cron';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const db = await readDb();
 
 // middleware для JSON:
 app.use(express.json());
